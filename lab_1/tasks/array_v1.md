@@ -2,7 +2,6 @@
 
 Реализуйте шаблонную версию класса Array. Список всех операций, которые должен поддерживать класс Array, приведен в шаблоне кода.
 
-```cpp=
 template <typename T>
 class Array
 {
@@ -42,5 +41,30 @@ public:
     //   две версии оператора доступа по индексу.
 private:
     // поля определите сами
+};
+```
+
+
+# Задача № 1
+
+Реализуйте шаблонную версию класса Array. Список всех операций, которые должен поддерживать класс Array, приведен в шаблоне кода.
+
+Implement template class Array<T>.
+
+template <typename T>
+class Array
+{
+public: 
+    explicit Array(size_t, const T&);
+    Array(const Array &);
+    Array(const Array &&);
+    ~Array();
+    Array& operator=(const Array &);
+    Array& operator=(Array &&);
+    size_t size() const;
+    T& operator[](size_t idx);
+    const T& operator[](size_t idx) const;
+private:
+    // something
 };
 ```
