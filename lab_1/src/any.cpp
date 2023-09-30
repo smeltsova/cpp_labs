@@ -1,4 +1,6 @@
-#include "any.cpp"
+#include <iostream>
+
+#include "value_holder.cpp"
 class Any {
  public:
   // В классе Any должен быть конструктор,

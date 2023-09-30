@@ -19,7 +19,7 @@ struct ICloneable {
 
 template <typename T>
 struct ValueHolder : virtual public ICloneable {
-  ValueHolder(const T& data) : data_(data);
+  ValueHolder(const T& data) : data_(data){};
   ICloneable* clone() const override { return new ValueHolder<T>(data_); };
   ~ValueHolder(){};
   T data_;
